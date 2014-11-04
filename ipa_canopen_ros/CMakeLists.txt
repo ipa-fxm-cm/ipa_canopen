@@ -39,6 +39,7 @@ catkin_package(
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} src/ipa_canopen_ros.cpp src/JointLimits.cpp)
+add_dependencies(${PROJECT_NAME} brics_actuator_gencpp)
 
 target_link_libraries(${PROJECT_NAME} boost_system pthread ${catkin_LIBRARIES})
 
